@@ -1,0 +1,46 @@
+/**
+ * Main CSS file for the application
+ *
+ * Asil Cetin
+ */
+
+.main-row {
+  height: calc(100vh - 56px);
+}
+
+.leaflet-sbs-range {
+  top: 50px !important;
+}
+
+img.content-img {
+  max-width: 100%;
+  padding-bottom: 10px;
+}
+
+.color-legend {
+  display: flex;
+  height: 30px;
+}
+
+.legend-item {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 0px 0px 2px #000000;
+  color: #fff;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.legend-item.bomben-treffer {
+  background-image: linear-gradient(135deg, #303a6b 22.22%, #ffffff 22.22%, #ffffff 50%, #303a6b 50%, #303a6b 72.22%, #ffffff 72.22%, #ffffff 100%);
+  background-size: 18.00px 18.00px;
+}
+
+.legend-item.beschuss {
+  background-image: linear-gradient(135deg, #80AA6E 22.22%, #ffffff 22.22%, #ffffff 50%, #80AA6E 50%, #80AA6E 72.22%, #ffffff 72.22%, #ffffff 100%);
+  background-size: 18.00px 18.00px;
+}
+
