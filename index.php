@@ -51,8 +51,14 @@
           <div id="mainMap" class="w-100 h-100"></div>
         </div>
         <div class="col-md-3 pt-3 annotation-content-block">
+          <div id="annotation-back-btn" style="display:none;">Back to the List</div>
           <?php foreach ($annotations as $annotation) { ?>
-            <div id="annotation-detail-<?php echo $annotation["id"]; ?>" class="annotation-detail" style="display:none;">
+            <div id="annotation-list-<?php echo $annotation["id"]; ?>" class="annotation-list" data-annotationID="<?php echo $annotation["id"]; ?>">
+              <h3><?php echo $annotation["title"]; ?></h3>
+            </div>
+          <?php } ?>
+          <?php foreach ($annotations as $annotation) { ?>
+            <div id="annotation-detail-<?php echo $annotation["id"]; ?>" class="annotation-detail" data-annotationID="<?php echo $annotation["id"]; ?>" style="display:none;">
               <h2><?php echo $annotation["title"]; ?></h2>
               <img class="content-img" src="<?php echo $annotation["image"]; ?>"/>
               <?php echo $annotation["text"]; ?>
