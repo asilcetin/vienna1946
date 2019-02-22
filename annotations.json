@@ -1,0 +1,29 @@
+{
+  "latestId":2,
+  "annotations":
+  [
+    {
+      "id":1,
+      "title":"Philipphof",
+      "coordinates":[48.20467, 16.36911],
+      "damage":1,
+      "current-status":"Replaced by Mahnmal gegen Krieg und Faschismus",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/5/53/Ernst_Graner_Wien_Albertinaplatz_mit_Philiphof_1904.jpg",
+      "image-source":"https://commons.wikimedia.org/wiki/File:Ernst_Graner_Wien_Albertinaplatz_mit_Philiphof_1904.jpg",
+      "text":"An dieser Stelle stand der Philipphof, ein repräsentativer Großwohnbau der Gründerzeit, der am 12. März 1945 durch einen Bombenangriff zerstört wurde. Hunderte Menschen, die in den Kellern Schutz gesucht hatten, fanden den Tod. Hier wurde im österreichischen Bedenkjahr 1988 von der Stadt Wien auf Initiative von Bürgermeister Helmut Zilk das „Mahnmal gegen Krieg und Faschismus“ errichtet.",
+      "text-source":"https://de.wikipedia.org/wiki/Philipphof"
+    },
+    {
+      "id":2,
+      "title":"Staatsoper",
+      "coordinates":[48.20320, 16.36918],
+      "damage":4,
+      "current-status":"Repaired",
+      "image":"https://media.diepresse.com/images/uploads_1152/1/6/9/4682089/staatsoper_142605846685336.jpg",
+      "image-source":"https://media.diepresse.com/images/uploads_1152/1/6/9/4682089/staatsoper_142605846685336.jpg",
+      "text":"Die benachbarte Staatsoper wird von fünf Spreng- und zahlreichen Brandbomben getroffen. Das Bühnenhaus wird zerstört, der Zuschauerraum sowie die seitlichen Stiegenhäuser stehen in Flammen. Eine rasche Löschung misslingt. Denn bei dem Luftangriff werden auch Hydranten und Wasserleitungen getroffen, sodass es bald kein Löschwasser mehr gibt. Das Feuer wütet zwei Tage und Nächte in der Oper, die Dächer stürzen in sich zusammen. Bis auf die Vorderfront verwandelt sich die Staatsoper in eine Ruine. Bis zur Wiedereröffnung der Staatsoper, die in der Zwischenzeit in das Theater an der Wien ausweicht, vergeht ein Jahrzehnt. Zur feierlichen Eröffnung der wieder aufgebauten Staatsoper wird am 5. November 1955 Ludwig van Beethovens Oper “Fidelio” unter dem Dirigenten Karl Böhm aufgeführt.",
+      "text-source":"https://diepresse.com/home/zeitgeschichte/4682089/Vor-70-Jahren_Die-Zerstoerung-der-Wiener-Staatsoper"
+    }
+  ]
+}
+

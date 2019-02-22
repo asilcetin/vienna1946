@@ -1,3 +1,7 @@
+<?php
+  include("functions.php");
+  $annotations = getAnnotations("all");
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,6 +13,7 @@
     <link rel="canonical" href="https://vienna1946.asilcetin.com">
     <!-- CSS files -->
     <link rel="stylesheet" href="includes/leaflet/leaflet.css"/>
+    <link rel="stylesheet" href="includes/leaflet/plugins/leaflet-geocoder/Control.Geocoder.css"/>
     <link rel="stylesheet" href="includes/bootstrap/css/bootstrap.min.css" >
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -45,22 +50,20 @@
         <div class="col-md-9 pl-0 pr-0">
           <div id="mainMap" class="w-100 h-100"></div>
         </div>
-        <div class="col-md-3 pt-3">
-          <div id="markerPhilipphof" style="display:none;">
-            <h2>Philipphof</h2>
-            <img class="content-img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Ernst_Graner_Wien_Albertinaplatz_mit_Philiphof_1904.jpg"/>
-            An dieser Stelle stand der Philipphof, ein repräsentativer Großwohnbau der Gründerzeit, der am 12. März 1945 durch einen Bombenangriff zerstört wurde. Hunderte Menschen, die in den Kellern Schutz gesucht hatten, fanden den Tod. Hier wurde im österreichischen Bedenkjahr 1988 von der Stadt Wien auf Initiative von Bürgermeister Helmut Zilk das „Mahnmal gegen Krieg und Faschismus“ errichtet."
-          </div>
-          <div id="markerStaatsoper" style="display:none;">
-            <h2>Staatsoper</h2>
-            <img class="content-img" src="https://media.diepresse.com/images/uploads_1152/1/6/9/4682089/staatsoper_142605846685336.jpg"/>
-            An dieser Stelle stand der Philipphof, ein repräsentativer Großwohnbau der Gründerzeit, der am 12. März 1945 durch einen Bombenangriff zerstört wurde. Hunderte Menschen, die in den Kellern Schutz gesucht hatten, fanden den Tod. Hier wurde im österreichischen Bedenkjahr 1988 von der Stadt Wien auf Initiative von Bürgermeister Helmut Zilk das „Mahnmal gegen Krieg und Faschismus“ errichtet."
-          </div>
+        <div class="col-md-3 pt-3 annotation-content-block">
+          <?php foreach ($annotations as $annotation) { ?>
+            <div id="annotation-detail-<?php echo $annotation["id"]; ?>" class="annotation-detail" style="display:none;">
+              <h2><?php echo $annotation["title"]; ?></h2>
+              <img class="content-img" src="<?php echo $annotation["image"]; ?>"/>
+              <?php echo $annotation["text"]; ?>
+            </div>
+          <?php } ?>
         </div>
       </div>
     </main><!-- /.container -->
     <!-- JS files -->
     <script src="includes/leaflet/leaflet.js"></script>
+    <script src="includes/leaflet/plugins/leaflet-geocoder/Control.Geocoder.js"></script>
     <script src="includes/leaflet/plugins/leaflet-side-by-side/leaflet-side-by-side.min.js"></script>
     <script src="includes/jquery/jquery.min.js" ></script>
     <script src="includes/bootstrap/js/bootstrap.bundle.min.js" ></script>

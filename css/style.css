@@ -4,13 +4,13 @@
  * Asil Cetin
  */
 
-body {
-  color: #ffffff;
-  background-color: #b71616;
-}
-
 .main-row {
   height: calc(100vh - 56px);
+}
+
+.annotation-content-block {
+  color: #ffffff;
+  background-color: #b71616;
 }
 
 .leaflet-sbs-range {
