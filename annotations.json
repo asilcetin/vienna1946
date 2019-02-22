@@ -1,5 +1,5 @@
 {
-  "latestId":2,
+  "latestId":3,
   "annotations":
   [
     {
@@ -16,13 +16,35 @@
     {
       "id":2,
       "title":"Staatsoper",
-      "coordinates":[48.20320, 16.36918],
+      "coordinates":[48.20320, 16.36938],
       "damage":4,
       "current-status":"Repaired",
       "image":"https://media.diepresse.com/images/uploads_1152/1/6/9/4682089/staatsoper_142605846685336.jpg",
       "image-source":"https://media.diepresse.com/images/uploads_1152/1/6/9/4682089/staatsoper_142605846685336.jpg",
       "text":"Die benachbarte Staatsoper wird von fünf Spreng- und zahlreichen Brandbomben getroffen. Das Bühnenhaus wird zerstört, der Zuschauerraum sowie die seitlichen Stiegenhäuser stehen in Flammen. Eine rasche Löschung misslingt. Denn bei dem Luftangriff werden auch Hydranten und Wasserleitungen getroffen, sodass es bald kein Löschwasser mehr gibt. Das Feuer wütet zwei Tage und Nächte in der Oper, die Dächer stürzen in sich zusammen. Bis auf die Vorderfront verwandelt sich die Staatsoper in eine Ruine. Bis zur Wiedereröffnung der Staatsoper, die in der Zwischenzeit in das Theater an der Wien ausweicht, vergeht ein Jahrzehnt. Zur feierlichen Eröffnung der wieder aufgebauten Staatsoper wird am 5. November 1955 Ludwig van Beethovens Oper “Fidelio” unter dem Dirigenten Karl Böhm aufgeführt.",
       "text-source":"https://diepresse.com/home/zeitgeschichte/4682089/Vor-70-Jahren_Die-Zerstoerung-der-Wiener-Staatsoper"
+    },
+    {
+      "id":3,
+      "title":"Hotel Métropole",
+      "coordinates":[48.21339, 16.37414],
+      "damage":1,
+      "current-status":"Replaced with Leopold-Figl-Hof",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/2/25/Hotel_Metropol_Vienna.jpg",
+      "image-source":"https://de.wikipedia.org/wiki/Hotel_M%C3%A9tropole#/media/File:Hotel_Metropol_Vienna.jpg",
+      "text":"Das Hotel Métropole, auch Hotel Metropol war ein Luxushotel in Wien, 1. Bezirk, das heute vor allem als ehemalige Gestapo-Leitstelle bekannt ist. 1945 wurde das Gebäude stark beschädigt, die Hausruine nach 1948 abgerissen. Am 12. März 1945 brannte das ehemalige Métropole bei dem schweren Luftangriff auf Wien aus. Allerdings gibt es auch Zeugenaussagen, denen zufolge der Brand, nach relativ geringen Bombenschäden, von der Gestapo zwecks Spurenvernichtung Anfang April 1945 selbst gelegt worden sei. Noch in dem 1948 in Wien gedrehten Trümmerfilm Der dritte Mann ist in einer Einstellung die gespenstische Ruine des Gestapo-Hauptquartiers zu erkennen. Dann wurden die Reste des Gebäudes abgerissen.",
+      "text-source":"https://de.wikipedia.org/wiki/Hotel_M%C3%A9tropole"
+    },
+    {
+      "id":4,
+      "title":"Burgtheater",
+      "coordinates":[48.21030, 16.36157],
+      "damage":4,
+      "current-status":"Repaired",
+      "image":"https://www.wienerzeitung.at/_em_daten/173892/_/1x6C6mNvhD5UXMunvHO6oDeXreHKxInwQ2hiOhsYl5-jrLj19Mzj3rlKFbhveYsXac0hy9mD6XPoyTrtuDGyNsjZ-wVgstSU_TJFnNm2ZYuF0/150429-1756-948-0960-179805.jpg",
+      "image-source":"https://www.wienerzeitung.at/nachrichten/kultur/buehne/749363_Das-Burgtheater-ist-eine-Idee.html",
+      "text":"Im Sommer 1944 musste auch das Burgtheater wegen der angeordneten allgemeinen Theatersperre geschlossen werden. Ab 1. April 1945, als sich die Rote Armee Wien näherte, lagerte eine militärische Einheit im Haus, ein Teil wurde als Waffenlager benutzt. Bei einem Bombenangriff wurde das Haus am Ring beschädigt und brannte am 12. April 1945 völlig aus. Zuschauerraum und Bühne wurden unbrauchbar, nur die Stahlkonstruktion blieb erhalten. Die Deckengemälde und Teile des Foyers waren beinahe unbeschädigt.",
+      "text-source":"https://de.wikipedia.org/wiki/Burgtheater#Das_Burgtheater_zu_Kriegsende_und_nach_dem_Zweiten_Weltkrieg"
     }
   ]
 }

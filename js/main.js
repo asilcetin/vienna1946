@@ -5,7 +5,7 @@
  */
 
 // Init map
-var mainMap = L.map('mainMap').setView([48.20479, 16.37065], 17);
+var mainMap = L.map('mainMap').setView([48.20479, 16.37065], 15);
 
 // Historical map layer
 var wmsLayer = L.tileLayer.wms('https://data.wien.gv.at/daten/wms?version=1.1.1', {
