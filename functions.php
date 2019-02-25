@@ -1,4 +1,9 @@
 <?php
+/**
+ * Basic CRUD functions for the application
+ *
+ * Asil Cetin
+ */
 
 function getAnnotations($annotationID) {
   $file = file_get_contents("annotations.json");
@@ -12,5 +17,8 @@ function getAnnotations($annotationID) {
     }
   }
 }
+
+$damageLevels = array("Totalschaden","Ausgebrant","Schwerer Schaden","Leichter Schaden","Bomben Treffer","Beschuss");
+
 
 ?>

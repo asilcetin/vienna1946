@@ -1,4 +1,9 @@
 <?php
+  /**
+   * Main page for the application
+   *
+   * Asil Cetin
+   */
   include("functions.php");
   $annotations = getAnnotations("all");
 ?>
@@ -52,9 +57,15 @@
         </div>
         <div class="col-md-3 pt-3 annotation-content-block">
           <div id="annotation-back-btn" style="display:none;">Back to the List</div>
+          <h3 id="annotation-list-heading">Annotated Damages</h3>
           <?php foreach ($annotations as $annotation) { ?>
             <div id="annotation-list-<?php echo $annotation["id"]; ?>" class="annotation-list" data-annotationID="<?php echo $annotation["id"]; ?>">
-              <h3><?php echo $annotation["title"]; ?></h3>
+              <img class="content-img d-inline pr-2" src="<?php echo $annotation["image"]; ?>"/>
+              <div class="d-inline">
+                <h4><?php echo $annotation["title"]; ?></h4>
+                <span class="meta-data d-block"><i data-feather="flag"></i> <?php echo $annotation["current-status"]; ?></span>
+                <span class="meta-data d-block"><i data-feather="target"></i> <?php echo $damageLevels[$annotation["damage"]-1]; ?></span>
+              </div>
             </div>
           <?php } ?>
           <?php foreach ($annotations as $annotation) { ?>
@@ -73,6 +84,7 @@
     <script src="includes/leaflet/plugins/leaflet-side-by-side/leaflet-side-by-side.min.js"></script>
     <script src="includes/jquery/jquery.min.js" ></script>
     <script src="includes/bootstrap/js/bootstrap.bundle.min.js" ></script>
+    <script src="includes/feather/feather.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

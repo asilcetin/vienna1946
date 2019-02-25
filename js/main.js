@@ -4,6 +4,9 @@
  * Asil Cetin
  */
 
+// Init feather icons
+feather.replace();
+
 // Init map
 var mainMap = L.map('mainMap').setView([48.2094, 16.3725], 15);
 
@@ -66,6 +69,7 @@ function onMarkerClick(e) {
   $('.annotation-detail').hide();
   $('#annotation-detail-'+markerID).show();
   $('.annotation-list').hide();
+  $('#annotation-list-heading').hide();
   $('#annotation-back-btn').show();
 }
 
@@ -73,6 +77,7 @@ function onMarkerClick(e) {
 $('.annotation-list').click(function(){
   var annotationID = $(this).attr('data-annotationID');
   $('.annotation-list').hide();
+  $('#annotation-list-heading').hide();
   $('#annotation-back-btn').show();
   $('#annotation-detail-'+annotationID).show();
   // Set default icon for all icons & set active icon for selected icon
@@ -82,7 +87,7 @@ $('.annotation-list').click(function(){
     console.log(marker);
     if (marker.options.markerID == markerID) {
       marker.setIcon(activeIcon);
-      mainMap.panTo(marker.getLatLng());
+      mainMap.flyTo(marker.getLatLng(), 18);
     } else {
       marker.setIcon(defaultIcon);
     }
@@ -91,6 +96,7 @@ $('.annotation-list').click(function(){
 
 $('#annotation-back-btn').click(function(){
   $('.annotation-list').show();
+  $('#annotation-list-heading').show();
   $(this).hide();
   $('.annotation-detail').hide();
 });

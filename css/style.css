@@ -49,3 +49,46 @@ img.content-img {
   background-size: 18.00px 18.00px;
 }
 
+.annotation-list, #annotation-back-btn {
+  cursor: pointer;
+}
+
+.annotation-list {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  padding: 15px 0 5px 0;
+}
+
+.annotation-list img.content-img {
+  max-width: 120px;
+  align-self: center;
+}
+
+.annotation-list img.content-img {
+  max-width: 155px;
+  align-self: center;
+}
+
+
+#annotation-list-heading {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+.annotation-list h4 {
+  margin-bottom: 7px;
+}
+
+svg.feather {
+  height: 1.2rem;
+  vertical-align: text-top;
+}
+
+.meta-data {
+  font-size: 15px;
+}
+
+
+
