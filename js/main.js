@@ -65,7 +65,7 @@ function onMarkerClick(e) {
   });
   // Set active icon for selected icon
   e.target.setIcon(activeIcon);
-  mainMap.panTo(e.target.getLatLng());
+  mainMap.flyTo(e.target.getLatLng(), 18);
   $('.annotation-detail').hide();
   $('#annotation-detail-'+markerID).show();
   $('.annotation-list').hide();

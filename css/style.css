@@ -11,6 +11,7 @@
 .annotation-content-block {
   color: #ffffff;
   background-color: #b71616;
+  overflow-y: scroll;
 }
 
 .leaflet-sbs-range {
