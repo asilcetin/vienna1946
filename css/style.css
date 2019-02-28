@@ -10,8 +10,14 @@
 
 .annotation-content-block {
   color: #ffffff;
-  background-color: #b71616;
+  background-color: #941f0a;
   overflow-y: scroll;
+  padding: 0;
+}
+
+.annotation-content-block a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .leaflet-sbs-range {
@@ -50,14 +56,15 @@ img.content-img {
   background-size: 18.00px 18.00px;
 }
 
-.annotation-list, #annotation-back-btn {
+.annotation-list, .annotation-back-btn {
   cursor: pointer;
 }
 
 .annotation-list {
   display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.33);
-  padding: 15px 0 5px 0;
+  padding: 15px 15px 5px 15px;
+  transition: background-color 0.1s ease; 
 }
 
 .annotation-list img.content-img {
@@ -75,6 +82,7 @@ img.content-img {
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.33);
   padding-bottom: 15px;
+  padding-top: 15px;
   margin-bottom: 0;
 }
 
@@ -90,6 +98,35 @@ svg.feather {
 .meta-data {
   font-size: 15px;
 }
+
+.annotation-detail {
+  min-height: 100%;
+  padding: 15px;
+}
+
+.annotation-list.TotalDamage:hover, .annotation-detail.TotalDamage {
+  background-color: #b88d1d;
+}
+
+.annotation-list.Burned:hover, .annotation-detail.Burned {
+  background-color: #D54024;
+}
+
+.annotation-list.HeavyDamage:hover, .annotation-detail.HeavyDamage {
+  background-color: #182B32;
+}
+
+.annotation-list.LightDamage:hover, .annotation-detail.LightDamage {
+  background-color: #6E9452;
+}
+
+
+
+
+
+
+
+
 
 
 

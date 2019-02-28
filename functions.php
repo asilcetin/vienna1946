@@ -18,7 +18,7 @@ function getAnnotations($annotationID) {
   }
 }
 
-$damageLevels = array("Totalschaden","Ausgebrant","Schwerer Schaden","Leichter Schaden","Bomben Treffer","Beschuss");
+$damageLevels = array("Total Damage","Burned","Heavy Damage","Light Damage","Bomb Hit","Bombardment");
 
 
 ?>

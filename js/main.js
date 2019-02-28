@@ -7,6 +7,11 @@
 // Init feather icons
 feather.replace();
 
+// Init tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 // Init map
 var mainMap = L.map('mainMap').setView([48.2094, 16.3725], 15);
 
@@ -17,11 +22,6 @@ var wmsLayer = L.tileLayer.wms('https://data.wien.gv.at/daten/wms?version=1.1.1'
 
 // Modern map layer
 var mapboxLayer = L.tileLayer('https://api.mapbox.com/styles/v1/acetin/cjsg631ow0n9a1fnytvsia3jv/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWNldGluIiwiYSI6ImNqYjIybG5xdTI4OWYyd285dmsydGFkZWQifQ.xG4sN5u8h-BoXaej6OjkXw', { tileSize: 512, zoomOffset: -1, attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(mainMap);
-/*
-var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap<\/a> contributors'
-}).addTo(mainMap);
-*/
 
 // Init both layers side by side
 L.control.sideBySide(wmsLayer, mapboxLayer).addTo(mainMap);
@@ -70,7 +70,6 @@ function onMarkerClick(e) {
   $('#annotation-detail-'+markerID).show();
   $('.annotation-list').hide();
   $('#annotation-list-heading').hide();
-  $('#annotation-back-btn').show();
 }
 
 // Annotation list interaction
@@ -78,13 +77,11 @@ $('.annotation-list').click(function(){
   var annotationID = $(this).attr('data-annotationID');
   $('.annotation-list').hide();
   $('#annotation-list-heading').hide();
-  $('#annotation-back-btn').show();
   $('#annotation-detail-'+annotationID).show();
   // Set default icon for all icons & set active icon for selected icon
   var markerToPan;
   var markerID = annotationID;
   markersLayerGroup.eachLayer(function (marker) {
-    console.log(marker);
     if (marker.options.markerID == markerID) {
       marker.setIcon(activeIcon);
       mainMap.flyTo(marker.getLatLng(), 18);
@@ -94,10 +91,9 @@ $('.annotation-list').click(function(){
   });
 });
 
-$('#annotation-back-btn').click(function(){
+$('.annotation-back-btn').click(function(){
   $('.annotation-list').show();
   $('#annotation-list-heading').show();
-  $(this).hide();
   $('.annotation-detail').hide();
 });
 
