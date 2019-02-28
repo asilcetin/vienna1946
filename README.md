@@ -5,9 +5,11 @@ This project is developed as a submission for the "ACDH virtual Open Data hackat
 
 ## Demonstration
 ### Exploration
+The web application offers comparative exploration of the maps and easy navigation between annotated geo locations:
 ![Exploration Showcase](https://raw.githubusercontent.com/asilcetin/vienna1946/master/images/demo1.gif)
 
 ### Annotation
+The web application offers an interface to create new annotations and thus allows participation of a community to enrich the map data:
 ![Annotation Showcase](https://raw.githubusercontent.com/asilcetin/vienna1946/master/images/demo2.gif)
 
 ## Installation
@@ -28,11 +30,11 @@ http://localhost/dev/acdh/vienna1946/
 The application offers basic API service to read the data of the app. This can easily be extended to cover more complex queries.
 Call to list all annotations:
 ```
-https://asilcetin/projects/vienna1946/api.php/list/all
+https://asilcetin.com/projects/vienna1946/api.php/list/all
 ```
 Call to list by ID:
 ```
-https://asilcetin/projects/vienna1946/api.php/list/1
+https://asilcetin.com/projects/vienna1946/api.php/list/1
 ```
 
 ## Modifications
@@ -41,3 +43,6 @@ You can modify this app however you want to show different maps or different dat
 * Annotation data is defined in vienna1946/annotations.json file.
 * CRUD functions are defined in vienna1946/functions.php
 * CSS styles can be changed in vienna1946/css/style.css
+
+## Conclusion / Lessons Learned
+Historical maps contain enormous information value however they lack structured and annotated data found in modern maps. Thus it's important to make the annotation possibility by a community and domain experts easy as possible and at the same time allow the comparison of historical and modern maps on the same interface. At this stage this web application achieves to be a proof of concept, which fulfils both of these necessities. However there is room for many future additions to enhance the functions of this application even further, such as extending the API, adding more layers of different historical maps, layering the areas of damages and toggling them by interaction with the legend etc. Based on this experimental work different and more complex map based comparison & annotation web applications can be created as well.
