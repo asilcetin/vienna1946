@@ -112,7 +112,7 @@
               </div>
               <div class="form-group">
                 <label for="text">Description</label>
-                <textarea class="form-control" name="text" placeholder="Enter the description of this annotations" rows="4" required></textarea>
+                <textarea class="form-control" name="text" placeholder="Enter the description of this annotations" rows="3" required></textarea>
               </div>
               <div class="form-group">
                 <label for="text-source">Description Source</label>
@@ -140,7 +140,11 @@
             </button>
           </div>
           <div class="modal-body">
-            
+            <p>Open Government Data provided by the City of Vienna: <a href="https://www.data.gv.at/katalog/dataset/87282445-a02d-4f7f-9bf6-196d73d9b3a9">https://www.data.gv.at/katalog/dataset/87282445-a02d-4f7f-9bf6-196d73d9b3a9</a></p>
+            <p>Bootstrap 4: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+            <p>Leaflet: <a href="https://leafletjs.com/">https://leafletjs.com/</a></p>
+            <p>Feather Icons: <a href="https://feathericons.com/">https://feathericons.com/</a></p>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
           </div>
         </div>
       </div>
