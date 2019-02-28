@@ -5,11 +5,11 @@ This project is developed as a submission for the "ACDH virtual Open Data hackat
 
 ## Demonstration
 ### Exploration
-The web application offers comparative exploration of the maps and easy navigation between annotated geo locations:
+The web application offers comparative exploration of the maps and easy navigation between annotated geo locations:\
 ![Exploration Showcase](https://raw.githubusercontent.com/asilcetin/vienna1946/master/images/demo1.gif)
 
 ### Annotation
-The web application offers an interface to create new annotations and thus allows participation of a community to enrich the map data:
+The web application offers an interface to create new annotations by community members to enrich the map data:\
 ![Annotation Showcase](https://raw.githubusercontent.com/asilcetin/vienna1946/master/images/demo2.gif)
 
 ## Installation
