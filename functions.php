@@ -35,8 +35,9 @@ function addAnnotationData($formData) {
   }
 
   $data["latestId"] = $newId;
-  array_push($data["annotations"], array('id' => $newId, 'title' => $formData["title"], 'coordinates' => $formData["coordinates"], 'damage' => $formData["damage"], 'current-status' => $formData["current-status"], 'image' => $formData["image"], 'image-source' => $formData["image-source"], 'text' => $formData["text"], 'text-source' => $formData["text-source"], 'added-by' => $formData["added-by"]));
-  $new_data = json_encode($data);
+  $coordinates = explode(',', $formData["coordinates"]);
+  array_push($data["annotations"], array('id' => $newId, 'title' => $formData["title"], 'coordinates' => array((float)$coordinates[0],(float)$coordinates[1]), 'damage' => $formData["damage"], 'current-status' => $formData["current-status"], 'image' => $formData["image"], 'image-source' => $formData["image-source"], 'text' => $formData["text"], 'text-source' => $formData["text-source"], 'added-by' => $formData["added-by"]));
+  $new_data = json_encode($data, JSON_NUMERIC_CHECK);
   if (file_put_contents("annotations.json", $new_data) === false){
     unset($new_data);
     return false;

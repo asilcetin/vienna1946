@@ -85,7 +85,7 @@
               </div>
               <div class="form-group">
                 <label for="coordinates">Building Coordinates</label>
-                <input type="text" class="form-control" name="coordinates" placeholder="Enter building coordinates, e.g: [48.20467, 16.36911]" required>
+                <input type="text" class="form-control" name="coordinates" placeholder="Enter building coordinates, e.g: 48.20467, 16.36911" required>
               </div>
               <div class="form-group">
                 <label for="damage">Damage Level</label>
