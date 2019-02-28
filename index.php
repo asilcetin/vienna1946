@@ -39,14 +39,113 @@
       <div class="collapse navbar-collapse" id="topNavbarItems">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Credits</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#addAnnotationModal">Add Annotation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Source Code</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#creditsModal">Credits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/asilcetin/vienna1946">Source Code</a>
           </li>
         </ul>
       </div>
     </nav>
+
+    <?php
+    // Handle the response if a new annotation is submitted
+    if ( isset( $_POST["damage"] ) ) {
+      addAnnotationData( $_POST );
+      echo '
+        <div class="alert alert-success mb-0 text-center" role="alert">
+          The new annotation is successfully submitted!
+        </div>
+        <script type="text/javascript">
+          setTimeout(function() {
+            window.location.replace(location.pathname);
+          }, 2000);
+        </script>';
+    }
+    ?>
+
+    <!-- Add Annotation Modal -->
+    <div class="modal fade" id="addAnnotationModal" tabindex="-1" role="dialog" aria-labelledby="addAnnotationModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Annotation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+              <div class="form-group">
+                <label for="title">Building Title</label>
+                <input type="text" class="form-control" name="title" placeholder="Enter building title, e.g: Philipphof" required>
+              </div>
+              <div class="form-group">
+                <label for="coordinates">Building Coordinates</label>
+                <input type="text" class="form-control" name="coordinates" placeholder="Enter building coordinates, e.g: [48.20467, 16.36911]" required>
+              </div>
+              <div class="form-group">
+                <label for="damage">Damage Level</label>
+                <select class="form-control" name="damage">
+                  <option value="1">Total Damage</option>
+                  <option value="2">Burned</option>
+                  <option value="3">Heavy Damage</option>
+                  <option value="4">Light Damage</option>
+                  <option value="5">Bomb Hit</option>
+                  <option value="6">Bombardment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="current-status">Current Status</label>
+                <input type="text" class="form-control" name="current-status" placeholder="Enter current status of the building, e.g: Repaired" required>
+              </div>
+              <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="url" class="form-control" name="image" placeholder="Enter an image URL for the building" required>
+              </div>
+              <div class="form-group">
+                <label for="image-source">Image Source</label>
+                <input type="text" class="form-control" name="image-source" placeholder="Enter image source for copyright reasons">
+              </div>
+              <div class="form-group">
+                <label for="text">Description</label>
+                <textarea class="form-control" name="text" placeholder="Enter the description of this annotations" rows="4" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="text-source">Description Source</label>
+                <input type="url" class="form-control" name="text-source" placeholder="Enter description source for copyright reasons">
+              </div>
+              <div class="form-group">
+                <label for="added-by">Added By</label>
+                <input type="text" class="form-control" name="added-by" placeholder="Enter your name as the creator of this annotation">
+              </div>
+              <button type="submit" name="action" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credits Modal -->
+    <div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="creditsModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Credits</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main role="main" class="container-fluid">
       <div class="row main-row">
         <div class="col-md-9 pl-0 pr-0">
